@@ -1,0 +1,8 @@
+[ClassVersion("1.0.0"), FriendlyName("vIPAddress")]
+class VE_vIPAddress : OMI_BaseResource
+{
+  [Key, Description("IP address to assign to the network adapter")] string IPAddress;
+  [Key, Description("Name of the network adapter to assign the IP address")] string InterfaceAlias;
+  [Required, Description("Subnet mask bit size")] uint32 SubnetMask;
+  [Write, ValueMap{"IPv4"}, Values{"IPv4"}] string AddressFamily;
+};

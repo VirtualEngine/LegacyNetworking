@@ -1,0 +1,7 @@
+[ClassVersion("1.0.0"), FriendlyName("vDNSServerAddress")] 
+class VE_vDNSServerAddress : OMI_BaseResource
+{
+  [Key, Description("Name of the network adapter to assign the DNS server addresses")] string InterfaceAlias;
+  [Required, Description("IP addresses of the DNS servers to  assign to the network adapter")] string Address[];
+  [Write, ValueMap{"IPv4"}, Values{"IPv4"}] string AddressFamily;
+};

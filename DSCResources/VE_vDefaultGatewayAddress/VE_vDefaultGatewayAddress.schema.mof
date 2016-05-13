@@ -1,0 +1,7 @@
+[ClassVersion("1.0.0"), FriendlyName("vDefaultGatewayAddress")] 
+class VE_vDefaultGatewayAddress : OMI_BaseResource
+{
+  [Key, Description("Name of the network adapter to assign the gateway address")] string InterfaceAlias;
+  [Required, Description("Default gateway address to assign to the network adapter")] string Address;
+  [Write, ValueMap{"IPv4"}, Values{"IPv4"}] string AddressFamily;
+};
