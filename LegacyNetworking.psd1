@@ -9,7 +9,7 @@
     PowerShellVersion = '3.0';
     FunctionsToExport = @('Get-LegacyNetFirewallRule','New-LegacyNetFirewallRule','Remove-LegacyNetFirewallRule','Set-LegacyNetFirewallRule'
                             'Get-LegacyNetAdapter', 'Get-LegacyNetAdapterConfiguration');
-    CmdletsToExport = '*';
+    DscResourcesToExport = @('vDefaultGatewayAddress', 'vDNSServerAddress', 'vFirewall', 'vIPAddress');
     PrivateData = @{
         PSData = @{  # Private data to pass to the module specified in RootModule/ModuleToProcess
             Tags = @('VirtualEngine','Legacy','DSC','Networking','Firewall');
