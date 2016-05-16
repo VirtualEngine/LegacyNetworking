@@ -1,6 +1,6 @@
 The LegacyNetworking module contains cmdlets and DSC resources for managing Windows 7 and Server 2008 R2 machines.
 These resources can be used to manage basic networking settings of down-level operating systems. Wherever possible,
-syntax compatibility with the xNetworking resource has been provided to easily replicate settings between different
+syntax compatibility with the xNetworking resources has been provided to easily replicate settings between different
 operating system versions.
 
 ### Included Cmdlets
