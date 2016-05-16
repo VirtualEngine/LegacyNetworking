@@ -1,16 +1,16 @@
 The LegacyNetworking module contains cmdlets and DSC resources for managing Windows 7 and Server 2008 R2 machines.
 These resources can be used to manage basic settings networking settings with down-level operating systems.
 
-###Included Cmdlets
-* **Get-LegacyNetAdapater**
-* **Get-LegacyNetAdapaterConfiguration**
-* **Get-LegacyNetFirewallRule**: Retrieves existing firewall rule(s)
-* **New-LegacyNetFirewallRule**: Creates a new firewall rule 
-* **Remove-LegacyNetFirewallRule**: Removes an existing firewall rule
-* **Set-LegacyNetFirewallRule**: Updates an existing firewall rule
+### Included Cmdlets
+* **Get-LegacyNetAdapater**: Queries network adapters.
+* **Get-LegacyNetAdapaterConfiguration**: Queries network adapter configurations.
+* **Get-LegacyNetFirewallRule**: Retrieves existing firewall rule(s).
+* **New-LegacyNetFirewallRule**: Creates a new firewall rule.
+* **Remove-LegacyNetFirewallRule**: Removes an existing firewall rule.
+* **Set-LegacyNetFirewallRule**: Updates an existing firewall rule.
 
-###Included Resources
-* **vDefaultGatewayAddress**: Configures the default gateway of a network adapter
+### Included Resources
+* **vDefaultGatewayAddress**: Configures the default gateway of a network adapter.
 * **vDNSServerAddress**: Configures the DNS server address(es) a network adapter.
 * **vFirewall**: Manages a local firewall rule.
 * **vIPAddress**: Manages local IP address assigned to a network adapter.
@@ -44,7 +44,7 @@ vDNSServerAddress [String] #ResourceName
 vFirewall
 =========
 Manages a local firewall rule.
-### SYNTAX
+### Syntax
 ```powershell
 vFirewall [String] #ResourceName
 {
@@ -63,10 +63,10 @@ vFirewall [String] #ResourceName
 }
 ```
 
-vFirewall
+vIPAddress
 =========
 Manages local IP address assigned to a network adapter.
-### SYNTAX
+### Syntax
 ```powershell
 vIPAddress [String] #ResourceName
 {
