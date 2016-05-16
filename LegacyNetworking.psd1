@@ -1,6 +1,6 @@
 @{
     RootModule = 'LegacyNetworking.psm1';
-    ModuleVersion = '1.0.0';
+    ModuleVersion = '1.0.1';
     GUID = 'e6d3bd31-ae43-47ab-8a14-e3b8d85a2d2b';
     Author = 'Iain Brighton';
     CompanyName = 'Virtual Engine';

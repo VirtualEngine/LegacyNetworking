@@ -212,10 +212,13 @@ function Set-TargetResource {
     ## Add enabled as it might not have been explicitly passed
     $PSBoundParameters['Enabled'] = $Enabled;
     
+    ## Remove Ensure as it can't be passed to *-LegacyNetFirewallRule
+    [ref] $null = $PSBoundParameters.Remove('Ensure');
+    
     $Profile = Resolve-ProfileParameter -Profile $Profile;
     $PSBoundParameters['Profile'] = $Profile;
     
-    $targetResource = Get-TargetResource @PSBoundParameters;
+    $targetResource = Get-TargetResource @PSBoundParameters -Ensure $Ensure;
     
     if (($Ensure -eq 'Present') -and ($targetResource.Ensure -eq 'Absent')) {
         ## Create
